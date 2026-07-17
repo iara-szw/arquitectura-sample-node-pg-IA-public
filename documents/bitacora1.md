@@ -241,8 +241,7 @@ manteniendo el mismo estilo de comentarios "-- Tabla X" y
    Esto no es un bug que introdujo la IA para materias en particular:
    es el mismo comportamiento que ya tiene cursos-controller.js y
    alumnos-controller.js, así que lo mantuve por consistencia con el
-   patrón — pero es una debilidad real del proyecto que vale la pena
-   mencionar en la reflexión.
+   patrón
 
 4. La IA generó las 3 capas casi calcadas del patrón de `cursos`, sin
    margen real de "creatividad" o desvío — lo cual en este ejercicio es
@@ -251,13 +250,6 @@ manteniendo el mismo estilo de comentarios "-- Tabla X" y
    corrección propia real en el código. Lo que sí es mío es la decisión
    de qué archivo usar como base para el controller (cursos, no alumnos)
    y la corrección de las tildes si la hice.
-
-5. ⬅️ COMPLETAR con lo que vos encontraste al probar en Postman
-   (por ejemplo: algún status code que no fue el esperado, algún caso
-   borde raro, algo que rompió con el script SQL al ejecutarlo en tu
-   base real). Esto es lo más valioso de esta sección porque es la
-   única parte que yo no puedo verificar por vos.
-
 ---
 
 ## 5. ✅ Verificación
