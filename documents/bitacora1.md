@@ -6,7 +6,7 @@
 
 ## Datos
 
-- **Alumno/a:** ⬅️ Iara Szwarstein
+- **Alumno/a:** ⬅️ Iara S
 - **Ejercicio:** N° 01 — Nueva tabla y su CRUD (materias)
 - **Fecha:** ⬅️ 17/7
 - **Modelo de IA usado:** ⬅️ Claude

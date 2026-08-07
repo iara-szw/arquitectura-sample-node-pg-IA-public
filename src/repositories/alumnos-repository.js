@@ -1,21 +1,16 @@
-import Db from './db-pg.js';
+import BaseRepository from './base-repository.js';
 
-export default class AlumnosRepository {
+// [IA] Refactor DRY: getAllAsync/getByIdAsync/deleteByIdAsync ahora viven en
+// BaseRepository. createAsync y updateAsync se mantienen ACÁ sin tocar la
+// lógica: updateAsync sigue haciendo el merge con previousEntity antes de
+// actualizar (restricción #5 -- no se generaliza ni se mueve a la clase base).
+//
+// El log prefix "AlumnosRepository-new" se preserva tal cual estaba en el
+// original (inconsistente con el nombre real de la clase), para no romper
+// nada que dependa del texto exacto del log (restricción #2).
+export default class AlumnosRepository extends BaseRepository {
     constructor() {
-        console.log('Estoy en: AlumnosRepository-new.constructor()');
-        this.db = new Db();
-    }
-
-    getAllAsync = async () => {
-        console.log(`AlumnosRepository-new.getAllAsync()`);
-        const sql = `SELECT * FROM alumnos`;
-        return await this.db.queryAll(sql);
-    }
-
-    getByIdAsync = async (id) => {
-        console.log(`AlumnosRepository-new.getByIdAsync(${id})`);
-        const sql = `SELECT * FROM alumnos WHERE id=$1`;
-        return await this.db.queryOne(sql, [id]);
+        super('alumnos', 'AlumnosRepository-new');
     }
 
     createAsync = async (entity) => {
@@ -47,6 +42,7 @@ export default class AlumnosRepository {
         console.log(`AlumnosRepository-new.updateAsync(${JSON.stringify(entity)})`);
         let id = entity.id;
 
+        // Sigue usando this.getByIdAsync, ahora heredado de BaseRepository.
         const previousEntity = await this.getByIdAsync(id);
         if (previousEntity == null) return 0;
 
@@ -66,11 +62,5 @@ export default class AlumnosRepository {
             entity?.hace_deportes    ?? previousEntity?.hace_deportes
         ];
         return await this.db.queryRowCount(sql, values);
-    }
-
-    deleteByIdAsync = async (id) => {
-        console.log(`AlumnosRepository-new.deleteByIdAsync(${id})`);
-        const sql = `DELETE FROM alumnos WHERE id=$1`;
-        return await this.db.queryRowCount(sql, [id]);
     }
 }
