@@ -1,8 +1,21 @@
 import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import AlumnosService from './../services/alumnos-service.js'
-import Alumno from './../entities/alumno.js'
-import { responderOk, responderCreated, responderNotFound, responderBadRequest, responderErrorInterno, responderError } from './../helpers/respuestas-helper.js'
+import AlumnosService from './../services/alumnos-service.js';
+import Alumno from './../entities/alumno.js';
+import {
+    responderOk,
+    responderCreated,
+    responderNotFound,
+    responderBadRequest,
+    responderErrorInterno,
+    responderError
+} from './../helpers/respuestas-helper.js';
+
+import {
+    parsearId,
+    validarAlumno,
+    ErrorValidacion
+} from './../helpers/validacion-helper.js';
 
 const router = Router();
 const currentService = new AlumnosService();
@@ -32,81 +45,135 @@ router.get('/test-insert', async (req, res) => {
         responderError(res, error, StatusCodes.BAD_REQUEST);
     }
 });
-
 router.get('', async (req, res) => {
     try {
         console.log(`AlumnosController.get`);
+
         const returnArray = await currentService.getAllAsync();
-        if (returnArray != null){
+
+        if (returnArray != null) {
             responderOk(res, returnArray);
         } else {
             responderErrorInterno(res, `Error interno.`);
         }
     } catch (error) {
-        responderError(res, error, StatusCodes.INTERNAL_SERVER_ERROR);
+        responderErrorInterno(res, 'Ocurrió un error interno.');
     }
 });
 
 router.get('/:id', async (req, res) => {
     try {
-        let id = req.params.id;
+        const id = parsearId(req.params.id);
+
+        console.log(`AlumnosController.getById(${id})`);
+
         const returnEntity = await currentService.getByIdAsync(id);
-        if (returnEntity != null){
+
+        if (returnEntity != null) {
             responderOk(res, returnEntity);
         } else {
-            responderNotFound(res, `No se encontro la entidad (id:${id}).`);
+            responderNotFound(
+                res,
+                `No se encontró el alumno con id ${id}.`
+            );
         }
     } catch (error) {
-        responderError(res, error, StatusCodes.INTERNAL_SERVER_ERROR);
+        if (error instanceof ErrorValidacion) {
+            return responderBadRequest(res, {
+                message: error.message
+            });
+        }
+
+        responderErrorInterno(res, 'Ocurrió un error interno.');
     }
 });
 
 router.post('', async (req, res) => {
     try {
-        let entity = req.body;
+        const entity = req.body;
+
+        validarAlumno(entity);
+
         const newId = await currentService.createAsync(entity);
-        if (newId > 0 ){
+
+        if (newId > 0) {
             responderCreated(res, newId);
         } else {
-            responderBadRequest(res, null);
+            responderErrorInterno(res, 'No se pudo crear el alumno.');
         }
     } catch (error) {
-        responderError(res, error, StatusCodes.BAD_REQUEST);
+        if (error instanceof ErrorValidacion) {
+            return responderBadRequest(res, {
+                message: error.message
+            });
+        }
+
+        // El error interno NO se expone al cliente.
+        responderErrorInterno(res, 'Ocurrió un error interno.');
     }
 });
 
 router.put('/:id', async (req, res) => {
     try {
-        let id = parseInt(req.params.id);
-        let entity = req.body;
+        const id = parsearId(req.params.id);
+        const entity = req.body;
 
-        if (entity.id && parseInt(entity.id) !== id) {
-            return responderBadRequest(res, `El id de la URL (${id}) no coincide con el id del body (${entity.id}).`);
+        validarAlumno(entity, true);
+
+        if (
+            entity.id !== undefined &&
+            parsearId(entity.id) !== id
+        ) {
+            return responderBadRequest(res, {
+                message: 'El id de la URL no coincide con el id del body.'
+            });
         }
 
         entity.id = id;
+
         const rowsAffected = await currentService.updateAsync(entity);
-        if (rowsAffected != 0){
+
+        if (rowsAffected != 0) {
             responderOk(res, rowsAffected);
         } else {
-            responderNotFound(res, `No se encontro la entidad (id:${id}).`);
+            responderNotFound(
+                res,
+                `No se encontró el alumno con id ${id}.`
+            );
         }
     } catch (error) {
-        responderError(res, error, StatusCodes.BAD_REQUEST);
+        if (error instanceof ErrorValidacion) {
+            return responderBadRequest(res, {
+                message: error.message
+            });
+        }
+
+        responderErrorInterno(res, 'Ocurrió un error interno.');
     }
 });
 
 router.delete('/:id', async (req, res) => {
     try {
-        let id = req.params.id;
+        const id = parsearId(req.params.id);
+
         const rowCount = await currentService.deleteByIdAsync(id);
-        if (rowCount != 0){
+
+        if (rowCount != 0) {
             responderOk(res, null);
         } else {
-            responderNotFound(res, `No se encontro la entidad (id:${id}).`);
+            responderNotFound(
+                res,
+                `No se encontró el alumno con id ${id}.`
+            );
         }
     } catch (error) {
-        responderError(res, error, StatusCodes.INTERNAL_SERVER_ERROR);
+        if (error instanceof ErrorValidacion) {
+            return responderBadRequest(res, {
+                message: error.message
+            });
+        }
+
+        responderErrorInterno(res, 'Ocurrió un error interno.');
     }
 });
 

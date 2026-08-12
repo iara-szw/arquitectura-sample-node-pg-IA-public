@@ -28,13 +28,13 @@ export default class AlumnosRepository extends BaseRepository {
                             $4,
                             $5
                         ) RETURNING id`;
-        const values = [
-            entity?.nombre           ?? '',
-            entity?.apellido         ?? '',
-            entity?.id_curso         ?? 0,
-            entity?.fecha_nacimiento ?? null,
-            entity?.hace_deportes    ?? 0
-        ];
+       const values = [
+    entity.nombre,
+    entity.apellido,
+    entity.id_curso,
+    entity.fecha_nacimiento ?? null,
+    entity.hace_deportes
+];
         return await this.db.queryReturnId(sql, values);
     }
 
@@ -53,14 +53,13 @@ export default class AlumnosRepository extends BaseRepository {
                         fecha_nacimiento    = $5,
                         hace_deportes       = $6
                     WHERE id = $1`;
-        const values = [
-            id,
-            entity?.nombre           ?? previousEntity?.nombre,
-            entity?.apellido         ?? previousEntity?.apellido,
-            entity?.id_curso         ?? previousEntity?.id_curso,
-            entity?.fecha_nacimiento ?? previousEntity?.fecha_nacimiento,
-            entity?.hace_deportes    ?? previousEntity?.hace_deportes
-        ];
+       const values = [
+    entity.nombre,
+    entity.apellido,
+    entity.id_curso,
+    entity.fecha_nacimiento ?? null,
+    entity.hace_deportes
+];
         return await this.db.queryRowCount(sql, values);
     }
 }
