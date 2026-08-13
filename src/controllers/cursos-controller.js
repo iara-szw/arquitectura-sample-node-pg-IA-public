@@ -101,7 +101,7 @@ router.get('/:id', async (req, res) => {
 // POST
 // =====================================
 
-router.post('', async (req, res) => {
+router.post('', authMiddleware ,async (req, res) => {
 
     try {
 
@@ -145,7 +145,7 @@ router.post('', async (req, res) => {
 // PUT
 // =====================================
 
-router.put('/:id', async (req, res) => {
+router.put('/:id',authMiddleware , async (req, res) => {
 
     try {
 
@@ -207,7 +207,7 @@ router.put('/:id', async (req, res) => {
 // DELETE
 // =====================================
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id',authMiddleware , async (req, res) => {
 
     try {
 

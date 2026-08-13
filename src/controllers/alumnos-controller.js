@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import AlumnosService from './../services/alumnos-service.js';
+import authMiddleware from "../middlewares/authMiddleware.js";
+
 import Alumno from './../entities/alumno.js';
 import {
     responderOk,
@@ -88,7 +90,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('', async (req, res) => {
+router.post('',authMiddleware , async (req, res) => {
     try {
         const entity = req.body;
 
@@ -113,7 +115,7 @@ router.post('', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id',authMiddleware , async (req, res) => {
     try {
         const id = parsearId(req.params.id);
         const entity = req.body;
@@ -152,7 +154,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id',authMiddleware , async (req, res) => {
     try {
         const id = parsearId(req.params.id);
 
