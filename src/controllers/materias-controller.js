@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import MateriasService from './../services/materias-service.js'
 import { responderOk, responderCreated, responderNotFound, responderBadRequest, responderErrorInterno, responderError } from './../helpers/respuestas-helper.js'
+import authMiddleware from "../middlewares/authMiddleware.js";
 
 const router = Router();
 const currentService = new MateriasService();

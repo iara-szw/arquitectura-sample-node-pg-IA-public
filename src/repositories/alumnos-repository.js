@@ -45,21 +45,22 @@ export default class AlumnosRepository extends BaseRepository {
         // Sigue usando this.getByIdAsync, ahora heredado de BaseRepository.
         const previousEntity = await this.getByIdAsync(id);
         if (previousEntity == null) return 0;
+  const sql = `UPDATE alumnos SET
+                    nombre              = $2,
+                    apellido            = $3,
+                    id_curso            = $4,
+                    fecha_nacimiento    = $5,
+                    hace_deportes       = $6
+                WHERE id = $1`;
 
-        const sql = `UPDATE alumnos SET
-                        nombre              = $2,
-                        apellido            = $3,
-                        id_curso            = $4,
-                        fecha_nacimiento    = $5,
-                        hace_deportes       = $6
-                    WHERE id = $1`;
-       const values = [
-    entity.nombre,
-    entity.apellido,
-    entity.id_curso,
-    entity.fecha_nacimiento ?? null,
-    entity.hace_deportes
-];
+    const values = [
+        entity.id,
+        entity.nombre,
+        entity.apellido,
+        entity.id_curso,
+        entity.fecha_nacimiento ?? null,
+        entity.hace_deportes
+    ];
         return await this.db.queryRowCount(sql, values);
     }
 }

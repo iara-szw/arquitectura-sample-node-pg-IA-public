@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import CursosService from './../services/cursos-service.js';
+import authMiddleware from "../middlewares/authMiddleware.js";
 
 import {
     responderOk,

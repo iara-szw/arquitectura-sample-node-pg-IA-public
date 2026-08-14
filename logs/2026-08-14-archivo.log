@@ -1,0 +1,160 @@
+2026-08-14T11:03:07.971Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:03:26.241Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:03:42.487Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:03:44.667Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:03:44.982Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:03:45.768Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:04:08.152Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:04:09.217Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:04:09.530Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:04:10.429Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:04:11.135Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:05:13.039Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:05:38.997Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:08:33.151Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:08:58.836Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
+2026-08-14T11:09:09.530Z: error - el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+Stack Trace:
+error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada «» requiere 6
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryRowCount (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:64:19)
+    at async AlumnosRepository.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/alumnos-repository.js:63:16)
+    at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
+
