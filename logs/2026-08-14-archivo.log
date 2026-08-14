@@ -158,3 +158,13 @@ error: el mensaje de «bind» entrega 5 parámetros, pero la sentencia preparada
     at async AlumnosService.updateAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:55:13)
     at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:136:30
 
+2026-08-14T11:52:34.958Z: error - no existe la relación «a»
+Stack Trace:
+error: no existe la relación «a»
+    at C:\Users\devandroid\Downloads\arquitectura-sample-node-pg-IA-public\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryAll (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/db-pg.js:24:15)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/repositories/base-repository.js:23:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/services/alumnos-service.js:17:29)
+    at async file:///C:/Users/devandroid/Downloads/arquitectura-sample-node-pg-IA-public/src/controllers/alumnos-controller.js:54:29
+

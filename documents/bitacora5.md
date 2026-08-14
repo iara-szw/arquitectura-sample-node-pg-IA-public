@@ -27,7 +27,7 @@ Agregar validaciones de JWT para autenticar quien podia hacer las operaciones se
 
 **Lo que escribí:**
 
-```text
+```
 Estoy trabajando en una API de Alumnos con Node.js, Express y PostgreSQL. Actualmente todos los endpoints son públicos, por lo que cualquiera podría hacer, por ejemplo, DELETE /api/alumnos/3 sin iniciar sesión ni presentar ningún tipo de credencial.
 
 Quiero agregar autenticación mediante JWT para solucionar este problema, pero necesito mantener la arquitectura que ya tiene mi proyecto y no modificar innecesariamente las partes que ya funcionan.

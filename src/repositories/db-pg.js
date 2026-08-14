@@ -15,58 +15,71 @@ export default class DbPg {
         }
         return this.DBPool;
     }
+queryAll = async (sql, values = null) => {
+    let returnArray = null;
 
-    queryAll = async (sql, values = null) => {
-        let returnArray = null;
-        try {
-            const resultPg = values
-                ? await this.getDBPool().query(sql, values)
-                : await this.getDBPool().query(sql);
-            returnArray = resultPg.rows;
-        } catch (error) {
-            LogHelper.logError(error);
-        }
-        return returnArray;
+    try {
+        const resultPg = values
+            ? await this.getDBPool().query(sql, values)
+            : await this.getDBPool().query(sql);
+
+        returnArray = resultPg.rows;
+    } catch (error) {
+        LogHelper.logError(error);
+        throw error;
     }
 
-    queryOne = async (sql, values = null) => {
-        let returnEntity = null;
-        try {
-            const resultPg = values
-                ? await this.getDBPool().query(sql, values)
-                : await this.getDBPool().query(sql);
-            if (resultPg.rows.length > 0) {
-                returnEntity = resultPg.rows[0];
-            }
-        } catch (error) {
-            LogHelper.logError(error);
+    return returnArray;
+}
+
+   queryOne = async (sql, values = null) => {
+    let returnEntity = null;
+
+    try {
+        const resultPg = values
+            ? await this.getDBPool().query(sql, values)
+            : await this.getDBPool().query(sql);
+
+        if (resultPg.rows.length > 0) {
+            returnEntity = resultPg.rows[0];
         }
-        return returnEntity;
+    } catch (error) {
+        LogHelper.logError(error);
+        throw error;
     }
 
-    queryReturnId = async (sql, values = null) => {
-        let newId = 0;
-        try {
-            const resultPg = values
-                ? await this.getDBPool().query(sql, values)
-                : await this.getDBPool().query(sql);
-            newId = resultPg.rows[0].id;
-        } catch (error) {
-            LogHelper.logError(error);
-        }
-        return newId;
+    return returnEntity;
+}
+queryReturnId = async (sql, values = null) => {
+    let newId = 0;
+
+    try {
+        const resultPg = values
+            ? await this.getDBPool().query(sql, values)
+            : await this.getDBPool().query(sql);
+
+        newId = resultPg.rows[0].id;
+    } catch (error) {
+        LogHelper.logError(error);
+        throw error;
     }
 
-    queryRowCount = async (sql, values = null) => {
-        let rowsAffected = 0;
-        try {
-            const resultPg = values
-                ? await this.getDBPool().query(sql, values)
-                : await this.getDBPool().query(sql);
-            rowsAffected = resultPg.rowCount;
-        } catch (error) {
-            LogHelper.logError(error);
-        }
-        return rowsAffected;
+    return newId;
+}
+queryRowCount = async (sql, values = null) => {
+    let rowsAffected = 0;
+
+    try {
+        const resultPg = values
+            ? await this.getDBPool().query(sql, values)
+            : await this.getDBPool().query(sql);
+
+        rowsAffected = resultPg.rowCount;
+    } catch (error) {
+        LogHelper.logError(error);
+        throw error;
     }
+
+    return rowsAffected;
+}
 }
